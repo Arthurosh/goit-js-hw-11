@@ -55,19 +55,19 @@ body {
   box-shadow: 0px 3px 4px rgb(245, 71, 71);
 }
 
-.gallery-list {
-  display: flex;
-  flex-wrap: wrap;
+.gallery {
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 320px;
+  grid-gap: 12px;
   justify-content: center;
-
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery-item {
   list-style: none;
-  width: 280px;
-  margin-right: 10px;
-  margin-bottom: 10px;
 }
 
 .card-link {
@@ -76,8 +76,9 @@ body {
 }
 
 .card-img {
-  width: 280px;
-  height: 200px;
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -85,9 +86,9 @@ body {
   display: flex;
   justify-content: space-between;
 
-  font-size: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   background-color: #fff;
 }
